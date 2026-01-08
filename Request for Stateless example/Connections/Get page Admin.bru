@@ -1,0 +1,26 @@
+meta {
+  name: Get page Admin
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{connectionPath}}/page/admin
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+      "username": "admin1",
+      "password" : "password"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

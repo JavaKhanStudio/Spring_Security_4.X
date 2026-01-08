@@ -1,0 +1,19 @@
+meta {
+  name: CheckCurrentRights
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{connectionPath}}/test/security
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

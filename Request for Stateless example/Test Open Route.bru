@@ -1,0 +1,20 @@
+meta {
+  name: Test Open Route
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{connectionPath}}/test
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  connectionPath: http://localhost:8085
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

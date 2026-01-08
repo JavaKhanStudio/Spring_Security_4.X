@@ -1,0 +1,27 @@
+meta {
+  name: Connection as User
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{connectionPath}}/api/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "username": "student1",
+      "password" : "password"
+  }
+}
+
+script:post-response {
+  var jsonData = res.getBody();
+  bru.setEnvVar("userToken", jsonData.token);
+}
+
+settings {
+  encodeUrl: true
+}

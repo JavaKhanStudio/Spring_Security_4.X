@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Request for Stateless example",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
