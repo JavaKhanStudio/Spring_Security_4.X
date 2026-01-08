@@ -1,0 +1,25 @@
+# General
+server.port=8085
+application.name=SecurityExample
+logging.level.org.springframework.security=DEBUG
+# Database
+spring.datasource.url=jdbc:postgresql://localhost:5432/bateau
+spring.datasource.username=user
+spring.datasource.password=password
+# DataBase - Hibernate
+spring.jpa.hibernate.ddl-auto=none
+# DataBase - Flyway
+spring.flyway.locations=classpath:db/migration,classpath:db/migration/testdata
+spring.flyway.enabled=true
+spring.flyway.out-of-order=true
+
+# Connections
+cors.allowedOrigins=http://localhost:8080,http://192.168.1.167:8080
+target.url=http://192.168.1.167:8080
+# Security
+jwt.secret=A_REMPLACERddddddddddddddddddddddddddddddddddezafrezafezgfezafezfezfezafezafezfezafezagregezfezafgezgraegfezrfezafezafze
+# Logging
+logging.level.root=INFO
+logging.level.org.springframework.web=INFO
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
+logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss} - %logger{35} - %level - %msg%n
